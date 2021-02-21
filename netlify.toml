@@ -13,4 +13,3 @@
   from = "/"
   to = "/post"
   status = 302
-  force = true

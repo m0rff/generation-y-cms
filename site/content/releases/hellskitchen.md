@@ -3,7 +3,7 @@ type: release
 title: "Hell's Kitchen"
 linktitle: "Hell's Kitchen"
 date: 2014-09-26
-image: img/releases/HellsKitchenWIP.png
+image: img/HellsKitchenWIP.png
 artist: GenerationY
 genre: Psytrance
 ---

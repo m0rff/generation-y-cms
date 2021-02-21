@@ -1,7 +1,7 @@
 <article class="post-card post"> 
-    {{if .Params.image}}
+    {{if .Params.cover}}
     <a class="post-card-image-link" href="{{ .Permalink }}">
-      <div class="post-card-image" style="background-image: url({{.Params.image | absURL}})"></div>
+      <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}})"></div>
     </a>
     {{else}}
     <a class="post-card-image-link" href="{{ .Permalink }}">
@@ -18,15 +18,21 @@
               <h2 class="post-card-title">{{.Title}}</h2>
           </header>
       </a>
+      {{if .Params.image }}
+      <img src="{{ .Params.image | absURL }}">
+      {{ end }}
       <section class="post-card-excerpt" style="padding: 0 25px;">
           {{ .Content }}
       </section>
 
       {{if .Params.author }}
       <footer class="post-card-meta">
-          <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
           <span class="post-card-author"><a href="/">{{.Params.author | default .Site.Params.author}}</a></span>
       </footer>
+      {{ end }}
+
+      {{if .Params.footerImage }}
+      <img src="{{ .Params.footerImage | absURL }}" width="100%">
       {{ end }}
     </div>
 </article>
