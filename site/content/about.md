@@ -10,9 +10,13 @@ type = "page"
 weight = 111
 
 +++
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Yow !
+> „Wir lieben es mit anderen Künstlern zusammen zu erschaffen.“
+
+Die Wurzeln von „Generation Y Production“ liegen im Jahr 2015. Bo und Wayne begründeten das Musikprojekt „Pandora 2015-2016“. 2016 benannte sich das Duo in „Generation Y“ um.
+
+Viele weitere Kreativschaffende finden Anklang in dem, was „Generation Y“ erschafft. Daraus entwickelte sich „Generation Y Production“ als Künstler-Kollektiv.
+
+> Zusammen sind wir Kreative Vielfalt!
+
+## Utopie / Beweggründe / Ziele
+Als freischaffendes Künstler-Kollektiv setzen wir gemeinsam Musik und Film-Projekte um. Freiheit als Gemeinschaft durch Künstlerische Projekte

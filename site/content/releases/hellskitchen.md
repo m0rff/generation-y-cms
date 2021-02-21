@@ -1,14 +1,11 @@
 ---
-author: "Morf"
-date: 2014-09-26
-linktitle: "Hell's Kitchen"
-title: "Hell's Kitchen"
-weight: 10
-image: img/releases/HellsKitchen.png
 type: release
-genre: Psytrance
-cover:
+title: "Hell's Kitchen"
+linktitle: "Hell's Kitchen"
+date: 2014-09-26
+image: img/releases/HellsKitchen.png
 artist: GenerationY
+genre: Psytrance
 ---
 
 

@@ -36,10 +36,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Artist", name: "artist", widget: "string"}
       - {label: "Genre", name: "genre", widget: "string"}
-      - {label: "Cover", name: "cover", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Summary", name: "Summary", widget: "markdown"}
-      - {label: "Description", name: "Description", widget: "markdown"}
   - name: "genre" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Genre" # Used in the UI, ie.: "New Post"
     folder: "site/content/genres" # The path to the folder where the documents are stored
