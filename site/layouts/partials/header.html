@@ -1,0 +1,33 @@
+<header class="site-header outer " {{if .Site.Params.cover}} style="background-image: url({{.Site.Params.cover | absURL}})" {{end}} >
+  <div class="inner">
+    <div class="site-header-content">
+      <h1 class="site-title">{{ if .Site.Params.logo }}
+        <img class="site-logo" src="{{ .Site.Params.logo  | absURL}}" alt="{{ .Site.Params.title }}" />
+      {{else}} {{ .Site.Params.title }} {{end}} </h1>
+        <h2 class="site-description">{{ .Site.Params.subtitle }} </h2>
+    </div>
+
+    <nav class="site-nav">
+      <div class="site-nav-left"><ul class="nav" role="menu">
+        {{ $currentNode := . }}
+        {{with .Site.Menus.main}}
+        {{ range sort . "Weight" "desc"}}
+            <li class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}nav-current{{end}}" role="menuitem">
+              <a href="{{.URL}}">{{.Name}}</a>
+            </li>
+        {{end}}{{end}}
+      </ul></div>
+
+      <div class="site-nav-right">
+        {{ partial "social-links-header" .}}
+        {{ if .Site.Params.RSSLink}}
+        <a class="subscribe-button" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
+        {{else if .Site.Params.showSubscribe}}
+        <a class="subscribe-button" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{"index.xml" | absURL}}{{end}}">Subscribe</a>
+        {{end}}    
+      </div>
+
+    </nav>  
+
+  </div>
+</header>

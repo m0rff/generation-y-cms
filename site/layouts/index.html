@@ -1,13 +1,17 @@
-{{ define "main" }}
+{{ partial "head" . }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+<body class="home-template"><div class="site-wrapper">
 
-{{ partial "short-text" .Params.blurb}}
+{{ partial "header" . }}
 
-{{ partial "2-up" .Params }}
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    <div class="post-feed">
+      TODO: Content
+    </div>
+  </div>
+</main>
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
-
-{{ end }}
+{{ partial "footer" . }}
+</div>
+</body></html>

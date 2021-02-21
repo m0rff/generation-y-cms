@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genres on </title>
+    <link>/genres/</link>
+    <description>Recent content in Genres on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Sat, 28 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="/genres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>house</title>
+      <link>/genres/house/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/genres/house/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psytrance</title>
+      <link>/genres/psytrance/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/genres/psytrance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>techno</title>
+      <link>/genres/techno/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/genres/techno/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

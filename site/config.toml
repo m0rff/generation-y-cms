@@ -1,9 +1,66 @@
-baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+baseurl         = "/"
+languageCode    = "de-DE"
+paginate        = 6
+#SectionPagesMenu = "main"
+canonifyurls    = true
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[params]
+  title       = "Generation Y"
+  subtitle    = "Port of Casper 2.x for Hugo"
+  copyright   = "© 2018"
+
+  cover       = "img/blog-cover.jpg"
+  description = "Music, Art, Dance, Create"
+  metaDescription = ""
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = ""
+  fbName = "GenerationYProduction"
+  ytName = "channel/UC327_c21E-o3c7Ysm0wfpig"
+  scName = "generationy_official"
+  instagramName = "generation_y_production"
+
+  logo = "hugo-logo.png"
+  orgName = "Generation Y"
+  orgWebsite = "https://generation-y.art"
+  orgDescription = "Music, Art, Dance, Create"
+
+  showSupport = true
+
+  author = "Generation Y"
+  authorAvatar = "img/ghost-icon.png"
+  authorLocation = "Munich, Germany"
+  authorWebsite = "https://generation-y.art"
+  authorDescription = "Music, Art, Dance, Create"
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "caspertwo"
+
+[taxonomies]
+  tag = "tags"
+  artist = "artists"
+  genre = "genres"
+  release = "releases"
+
+[permalinks]
+  post = "/post/:slug/"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/post"
+  weight = 200
+
+[[menu.main]]
+  name = "Releases"
+  url = "/releases/"
+  weight = 105
+
+[[menu.main]]
+  identifier = "artists"
+  name = "Artists"
+  url = "/artists/"
+  weight = 100
