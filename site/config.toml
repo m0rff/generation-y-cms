@@ -1,14 +1,12 @@
 baseurl         = "/"
-#theme           = "casper-two"
 languageCode    = "de-DE"
 paginate        = 6
-#SectionPagesMenu = "main"
 canonifyurls    = true
 
 
 [params]
   title       = "Generation Y"
-  subtitle    = "Port of Casper 2.x for Hugo"
+  subtitle    = ""
   copyright   = "© 2018"
 
   cover       = "img/blog-cover.jpg"
@@ -28,7 +26,7 @@ canonifyurls    = true
   orgWebsite = "https://generation-y.art"
   orgDescription = "Music, Art, Dance, Create"
 
-  showSupport = true
+  showSupport = false
 
   author = "Generation Y"
   authorAvatar = "img/ghost-icon.png"
@@ -42,7 +40,6 @@ canonifyurls    = true
   singleViewStyle = "caspertwo"
 
 [taxonomies]
-  tag = "tags"
   artist = "artists"
   genre = "genres"
   release = "releases"

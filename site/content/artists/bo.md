@@ -1,11 +1,9 @@
 ---
-author: "Morf"
+type: artist
 date: 2013-09-28
 linktitle: Bo
 title: Bo
-artists : ["Bo"]
-genres : ["house", "psytrance"]
-type: artist
+image:
 ---
 
 

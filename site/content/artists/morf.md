@@ -1,11 +1,10 @@
 ---
+type: artist
 author: "Morf"
 date: 2013-09-28
 linktitle: Morf
 title: Morf
-artists : ["Morf"]
-genres : ["techno", "psytrance"]
-type: artist
+image:
 ---
 
 

@@ -10,19 +10,19 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      - {label: "Author", name: "author", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Linktitle", name: "linktitle", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}", widget: "markdown"}
   - name: "artist" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Artist" # Used in the UI, ie.: "New Post"
     folder: "site/content/artists" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Linktitle", name: "linktitle", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "release" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -31,18 +31,22 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Linktitle", name: "linktitle", widget: "string"}
+      - {label: "Release Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Artist", name: "artist", widget: "string"}
+      - {label: "Genre", name: "genre", widget: "string"}
+      - {label: "Cover", name: "cover", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Summary", name: "Summary", widget: "markdown"}
+      - {label: "Description", name: "Description", widget: "markdown"}
   - name: "genre" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Genre" # Used in the UI, ie.: "New Post"
     folder: "site/content/genres" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Linktitle", name: "linktitle", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
