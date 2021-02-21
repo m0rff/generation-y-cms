@@ -5,11 +5,11 @@ canonifyurls    = true
 
 
 [params]
-  title       = "Generation Y"
+  title       = ""
   subtitle    = ""
   copyright   = "© 2018"
 
-  cover       = "/img/headers/blue.jpg"
+  cover       = "/img/headers/yellow.jpg"
   description = "Music, Art, Dance, Create"
   metaDescription = ""
   customCSS = []
@@ -21,15 +21,15 @@ canonifyurls    = true
   scName = "generationy_official"
   instagramName = "generation_y_production"
 
-  logo = "/img/logos/square.jpg"
+  logo = ""
   orgName = "Generation Y"
   orgWebsite = "https://generation-y.art"
   orgDescription = "Music, Art, Dance, Create"
 
   showSupport = false
 
-  author = "Generation Y"
-  authorAvatar = "img/ghost-icon.png"
+  author = ""
+  authorAvatar = ""
   authorLocation = "Munich, Germany"
   authorWebsite = "https://generation-y.art"
   authorDescription = "Music, Art, Dance, Create"
@@ -62,3 +62,10 @@ canonifyurls    = true
   name = "Artists"
   url = "/artists/"
   weight = 100
+
+[[menu.main]]
+  identifier = "genres"
+  name = "Genres"
+  url = "/genres/"
+  weight = 50
+
