@@ -1,11 +1,14 @@
 ---
 type: genre
-linktitle: House
+slug: house
 title: House
-weight: 10
+cover:
+image:
+color1:
+color2:
+color3:
+color4:
 ---
 
-
-## Introduction
 
 Kickbassbassbass

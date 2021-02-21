@@ -1,12 +1,10 @@
 ---
 type: artist
-date: 2013-09-28
-title: Carlos
-linktitle: Carlos
-image:
+slug: carlos
+name: Carlos
+cover: 
+image: 
+portrait: 
 ---
 
-
-## Introduction
-
-sdfsdgsdg
+Lorem Ipsum

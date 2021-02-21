@@ -23,7 +23,7 @@ canonifyurls    = true
 
   logo = ""
   orgName = "Generation Y"
-  orgWebsite = "https://generation-y.art"
+  orgWebsite = "https://generation-y.acid.wtf/"
   orgDescription = "Music, Art, Dance, Create"
 
   showSupport = false
@@ -31,18 +31,13 @@ canonifyurls    = true
   author = ""
   authorAvatar = ""
   authorLocation = "Munich, Germany"
-  authorWebsite = "https://generation-y.art"
+  authorWebsite = "https://generation-y.acid.wtf/"
   authorDescription = "Music, Art, Dance, Create"
 
   pageNotFoundTitle = "404 - Page not found"
 
   #casper or caspertwo
   singleViewStyle = "caspertwo"
-
-[taxonomies]
-  artist = "artists"
-  genre = "genres"
-  release = "releases"
 
 [permalinks]
   post = "/post/:slug/"

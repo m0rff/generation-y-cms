@@ -1,12 +1,10 @@
 ---
 type: artist
-date: 2013-09-28
-title: Vio
-linktitle: Vio
-image:
+slug: vio
+name: Vio
+cover: 
+image: 
+portrait: 
 ---
 
-
-## Introduction
-
-sdfsdgsdg
+Lorem Ipsum

@@ -1,11 +1,14 @@
 ---
 type: genre
-linktitle: DNB
+slug: dnb
 title: Drum'n'Bass
-weight: 10
+cover:
+image:
+color1:
+color2:
+color3:
+color4:
 ---
 
-
-## Introduction
 
 Kickbassbassbass

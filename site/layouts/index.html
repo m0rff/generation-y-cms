@@ -1,17 +1,20 @@
 {{ partial "head" . }}
 
-<body class="home-template"><div class="site-wrapper">
+<body class="home-template">
+  <div class="site-wrapper">
 
-{{ partial "header" . }}
+    {{ partial "header" . }}
 
-<main id="site-main" class="site-main outer" role="main">
-  <div class="inner">
-    <div class="post-feed">
-      {{ partial "post-list" . }}
-    </div>
+    <main id="site-main" class="site-main outer" role="main">
+      <div class="inner">
+        <div class="post-feed">
+          {{ partial "post-list" . }}
+        </div>
+      </div>
+    </main>
+
+    {{ partial "footer" . }}
   </div>
-</main>
+</body>
 
-{{ partial "footer" . }}
-</div>
-</body></html>
+</html>

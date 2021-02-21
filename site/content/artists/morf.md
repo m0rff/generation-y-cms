@@ -1,12 +1,10 @@
 ---
 type: artist
-date: 2013-09-28
-title: Morf
-linktitle: Morf
-image:
+slug: morf
+name: Morf
+cover: 
+image: 
+portrait: 
 ---
 
-
-## Introduction
-
-sdfsdgsdg
+Lorem Ipsum
