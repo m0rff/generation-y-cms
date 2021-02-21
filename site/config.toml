@@ -1,4 +1,5 @@
 baseurl         = "/"
+#theme           = "casper-two"
 languageCode    = "de-DE"
 paginate        = 6
 #SectionPagesMenu = "main"
