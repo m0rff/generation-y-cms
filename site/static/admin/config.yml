@@ -15,12 +15,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Linktitle", name: "linktitle", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "artist" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Artist" # Used in the UI, ie.: "New Post"
     folder: "site/content/artists" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
+    fields: # The fields each document in   this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Linktitle", name: "linktitle", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}

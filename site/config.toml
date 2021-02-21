@@ -9,7 +9,7 @@ canonifyurls    = true
   subtitle    = ""
   copyright   = "© 2018"
 
-  cover       = "img/blog-cover.jpg"
+  cover       = "/img/headers/blue.jpg"
   description = "Music, Art, Dance, Create"
   metaDescription = ""
   customCSS = []
@@ -21,7 +21,7 @@ canonifyurls    = true
   scName = "generationy_official"
   instagramName = "generation_y_production"
 
-  logo = "hugo-logo.png"
+  logo = "/img/logos/square.jpg"
   orgName = "Generation Y"
   orgWebsite = "https://generation-y.art"
   orgDescription = "Music, Art, Dance, Create"
