@@ -1,4 +1,4 @@
-<article class="post-card post"> 
+<article class="post-card post">
     {{if .Params.cover}}
     <a class="post-card-image-link" href="{{ .Permalink }}">
       <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}})"></div>
@@ -6,7 +6,7 @@
     {{else}}
     <a class="post-card-image-link" href="{{ .Permalink }}">
       <div class="post-card-image" style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
-    </a>    
+    </a>
     {{end}}
 
     <div class="post-card-content">
@@ -19,7 +19,7 @@
           </header>
       </a>
       {{if .Params.image }}
-      <img src="{{ .Params.image | absURL }}">
+      <img style="object-fit: cover;width: 100%;height: 150px;" src="{{ .Params.image | absURL }}">
       {{ end }}
       <section class="post-card-excerpt" style="padding: 0 25px;">
           {{ .Content }}
@@ -32,7 +32,9 @@
       {{ end }}
 
       {{if .Params.footerImage }}
-      <img src="{{ .Params.footerImage | absURL }}" width="100%">
+        <div class="footerImage">
+            <img src="{{ .Params.footerImage | absURL }}" width="100%">
+        </div>
       {{ end }}
     </div>
 </article>

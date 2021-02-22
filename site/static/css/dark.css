@@ -10,8 +10,9 @@
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-embed[type="application/pdf"] {
-  filter: invert(90%);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -37,35 +38,6 @@ textarea {
 font,
 html {
   color: #bfbfbf;
-}
-
-.NIGHTEYE_Filter {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  z-index: 2147483647;
-}
-
-.NIGHTEYE_YellowFilter {
-  background: rgba(255, 255, 0, 0.15);
-  opacity: 0;
-}
-
-.NIGHTEYE_BlueFilter {
-  background: rgba(0, 0, 255, 0.15);
-  opacity: 0;
-}
-
-.NIGHTEYE_DimFilter {
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-}
-
-.NIGHTEYE_TransformZ {
-  transform: translateZ(0);
 }
 
 a,
@@ -872,6 +844,7 @@ h6 {
 .nav li a {
   display: block;
   margin: 0;
+  font-weight: 600;
 }
 
 .nav li {
@@ -882,7 +855,7 @@ h6 {
 .nav li a {
   padding: 10px 12px;
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .nav li a:hover,
@@ -2517,6 +2490,11 @@ h6 {
 }
 
 .pull-right {
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: 0;
+}
+
+.footerImage {
+    width: 60%;
+    margin: 5em auto;
 }

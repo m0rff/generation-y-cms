@@ -53,7 +53,9 @@
                     </ul>
 
                   {{if .Params.image}}
-                  <img src="{{.Params.image | absURL}}" width="100%">
+                  <div class="footerImage">
+                    <img src="{{.Params.image | absURL}}" width="100%">
+                  </div>
                   {{end}}
               </section>
             </div>

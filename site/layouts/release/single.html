@@ -20,14 +20,14 @@
         <div class="post-feed">
           <article class="post-card post">
             {{if .Params.cover}}
-              <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}});filter: blur(3px);-webkit-filter: blur(3px);  background-position: 0 -10px; background-repeat: no-repeat; background-size: cover;"></div>
+              <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}});"></div>
             {{else}}
               <div class="post-card-image"
                 style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
             {{end}}
 
-            <div class="post-card-content" style="background-color: {{$genre.Params.color1}}">
-                <header class="post-card-header">
+            <div class="post-card-content" style="padding-top:2em;background-color: {{$genre.Params.color1}}">
+                <header class="post-card-header" style="padding-left: 25px;">
                   {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
                     #{{$tag}} {{end}} </span>
                   {{ end }}
@@ -60,11 +60,11 @@
                   </div>
               </section>
               <section>
-                <div style="width: 60%;margin:auto;margin-top: 5em;">
-                  {{if .Params.footerImage }}
-                  <img src="{{ .Params.footerImage | absURL }}" width="100%">
-                  {{ end }}
+              {{if .Params.footerImage }}
+                <div class="footerImage">
+                    <img src="{{ .Params.footerImage | absURL }}" width="100%">
                 </div>
+              {{ end }}
               </section>
             </div>
         </div>
