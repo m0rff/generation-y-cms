@@ -1,10 +1,10 @@
 ---
-footerImage: img/HellsKitchenWIP.png
+footerImage: img/studio1.jpg
 title: Hell's Kitchen
 slug: hellskitchen
 date: 2020-09-26
-cover: img/HellsKitchenWIP.png
-image: img/HellsKitchenWIP.png
+cover: img/HellsKitchenCover.jpg
+image: img/HellsKitchen.jpg
 artists:
   - artist: Generation Y
   - artist: Carlos
