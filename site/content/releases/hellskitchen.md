@@ -12,6 +12,8 @@ artists:
   - artist: Carlos
   - artist: Bo
   - artist: Morf
+genres:
+  - genre: Psytrance
 type: release
 linktitle: Hell's Kitchen
 ---
