@@ -21,7 +21,7 @@
     <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="canonical" href="{{$.Site.BaseURL}}{{ .Permalink }}" />
 
     {{ if .IsPage }} <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" /> {{ else }}
     <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" /> {{ end }}
