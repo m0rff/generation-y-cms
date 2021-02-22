@@ -1,14 +1,19 @@
 ---
-type: release
-title: "Hell's Kitchen"
+footerImage: img/HellsKitchenWIP.png
+genre: null
+artist: null
+title: Hell's Kitchen
 slug: hellskitchen
-linktitle: "Hell's Kitchen"
 date: 2014-09-26
 cover: img/HellsKitchenWIP.png
 image: img/HellsKitchenWIP.png
-footerImage: img/HellsKitchenWIP.png
-artist:
-genre:
+artists:
+  - artist: Generation Y
+  - artist: Carlos
+  - artist: Bo
+  - artist: Morf
+type: release
+linktitle: Hell's Kitchen
 ---
 
 
