@@ -1,0 +1,2430 @@
+//colors
+$color_silver_approx: #bfbfbf;
+$white_20: rgba(255, 255, 255, 0.2);
+$white_30: rgba(255, 255, 255, 0.3);
+$white_50: rgba(255, 255, 255, 0.5);
+$color_mine_shaft_approx: #1f1f1f;
+$color_cornflower_approx: #99cbe6;
+$color_saratoga_approx: #5f6218;
+$color_loblolly_approx: #b7c2c8;
+$color_nile_blue_approx: #153f56;
+$color_outer_space_approx: #26333b;
+$color_big_stone_approx: #18303e;
+$white: #fff;
+$color_cod_gray_approx: #0a0a0a;
+$black_18: rgba(0, 0, 0, 0.18);
+$black_10: rgba(0, 0, 0, 0.1);
+$color_shark_approx: #1c1c21;
+$color_mine_shaft_6_approx: rgba(43, 43, 43, 0.06);
+$color_mine_shaft_3_approx: rgba(43, 43, 43, 0.03);
+$color_mine_shaft_10_approx: rgba(43, 43, 43, 0.1);
+$color_mine_shaft_7_approx: rgba(43, 43, 43, 0.07);
+$color_limed_spruce_approx: #3a4f59;
+$color_mine_shaft_15_approx: rgba(43, 43, 43, 0.15);
+$color_shakespeare_approx: #58a9d5;
+$black: #000;
+$color_catskill_white_approx: #e5eff5;
+$black_20: rgba(0, 0, 0, 0.2);
+$color_boston_blue_approx: #308dc0;
+$black_14: rgba(0, 0, 0, 0.14);
+$color_curious_blue_approx: #3396cc;
+$color_nevada_approx: #54666d;
+$color_firefly_80_approx: rgba(12, 37, 49, 0.8);
+$color_black_pearl_70_approx: rgba(8, 20, 33, 0.7);
+$color_shark_30_approx: rgba(28, 28, 33, 0.3);
+$black_6: rgba(0, 0, 0, 0.06);
+$color_shark_95_approx: rgba(28, 28, 33, 0.95);
+$color_silver_70_approx: rgba(191, 191, 191, 0.7);
+$black_70: rgba(0, 0, 0, 0.7);
+$color_blumine_approx: #1f577a;
+$color_shark_10_approx: rgba(28, 28, 33, 0.1);
+$color_black_pearl_97_approx: rgba(8, 23, 33, 0.97);
+$white_70: rgba(255, 255, 255, 0.7);
+$color_primrose_approx: #e6e699;
+
+//fonts
+$font_0: sans-serif;
+$font_1: monospace;
+$font_2: Exo 2;
+
+//@extend-elements
+//original selectors
+//a, abbr, acronym, address, applet, article, aside, big, caption, cite, del, details, div, embed, figcaption, figure, footer, form, header, hgroup, ins, label, mark, menu, nav, object, output, q, ruby, s, section, span, strike, summary, table, tbody, tfoot, thead, time, tr, tt, var
+%extend_1 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style: inherit;
+	font-variant: inherit;
+	font-weight: inherit;
+	font-stretch: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+//original selectors
+//body, dfn, em
+%extend_2 {
+	font-variant: inherit;
+	font-stretch: inherit;
+	font-family: inherit;
+}
+
+//original selectors
+//audio, canvas, iframe, video
+%extend_3 {
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-size: 100%;
+}
+
+//original selectors
+//code, html, kbd, pre, samp, small
+%extend_4 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+//original selectors
+//audio, canvas, dd, dl, dt, h1, h2, h3, h4, h5, h6, iframe, li, ol, p, strong, ul, video
+%extend_5 {
+	font-style: inherit;
+	font-variant: inherit;
+	font-stretch: inherit;
+	font-family: inherit;
+}
+
+//original selectors
+//sub, sup
+%extend_6 {
+	padding: 0;
+	border: 0;
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+}
+
+//original selectors
+//td, th
+%extend_7 {
+	margin: 0;
+	border: 0;
+	font-style: inherit;
+	font-variant: inherit;
+	font-weight: inherit;
+	font-stretch: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+//original selectors
+//button, input, optgroup, select, textarea
+%extend_8 {
+	margin: 0;
+	color: inherit;
+	font: inherit;
+}
+
+
+::-webkit-scrollbar-track-piece {
+	background-color: $white_20 !important;
+}
+::-webkit-scrollbar-track {
+	background-color: $white_30 !important;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $white_50 !important;
+}
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+}
+html {
+	background: $color_mine_shaft_approx !important;
+	filter: contrast(100%) brightness(100%) saturate(100%);
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	font-family: $font_0;
+	text-size-adjust: 100%;
+	overflow-y: scroll;
+	font-size: 62.5%;
+	color: $color_silver_approx;
+	@extend %extend_4;
+	overflow-x: hidden;
+	input[type="button"] {
+		cursor: pointer;
+	}
+	input[disabled] {
+		cursor: default;
+	}
+}
+body {
+	background-image: none !important;
+	margin: 0;
+	color: $color_loblolly_approx;
+	font-family: $font_2, $font_0;
+	font-size: 1.5rem;
+	line-height: 1.6em;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 0;
+	text-rendering: optimizelegibility;
+	background: $color_mine_shaft_approx;
+	background-color: $color_mine_shaft_approx;
+	@extend %extend_2;
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	overflow-x: hidden;
+}
+button {
+	background-color: $color_mine_shaft_approx;
+	@extend %extend_8;
+	overflow: visible;
+	border: 0;
+	text-transform: none;
+	cursor: pointer;
+}
+input {
+	background-color: $color_mine_shaft_approx;
+	@extend %extend_8;
+	line-height: normal;
+	&:focus {
+		outline: 0;
+	}
+}
+select {
+	background-color: $color_mine_shaft_approx;
+	@extend %extend_8;
+	text-transform: none;
+}
+textarea {
+	background-color: $color_mine_shaft_approx;
+	@extend %extend_8;
+	overflow: auto;
+	resize: vertical;
+}
+.post-full-content {
+	position: relative;
+	margin: 0 auto;
+	padding: 70px 100px 0;
+	min-height: 230px;
+	font-family: $font_2, $font_0;
+	font-size: 2.2rem;
+	line-height: 1.6em;
+	background: $color_shark_approx;
+	em {
+		color: $color_silver_approx;
+	}
+	strong {
+		color: $color_silver_approx;
+	}
+	blockquote {
+		min-width: 100%;
+		margin: 0 0 1.5em;
+		padding: 0 1.5em;
+		border-left: 3px solid $color_shakespeare_approx;
+		p {
+			margin: 0 0 1em;
+			color: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			font-style: italic;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	dl {
+		min-width: 100%;
+	}
+	h1 {
+		min-width: 100%;
+		color: $color_silver_approx;
+		font-family: $font_2, $font_0;
+		margin: 0.5em 0 0.2em;
+		font-size: 4.6rem;
+		font-weight: 700;
+	}
+	h2 {
+		min-width: 100%;
+		color: $color_silver_approx;
+		font-family: $font_2, $font_0;
+		margin: 0.5em 0 0.2em;
+		font-size: 4.6rem;
+		font-weight: 700;
+		font-size: 3.6rem;
+	}
+	h3 {
+		min-width: 100%;
+		color: $color_silver_approx;
+		font-family: $font_2, $font_0;
+		margin: 0.5em 0 0.2em;
+		font-size: 2.8rem;
+		font-weight: 700;
+	}
+	h4 {
+		min-width: 100%;
+		color: $color_silver_approx;
+		font-family: $font_2, $font_0;
+		margin: 0.5em 0 0.2em;
+		font-size: 2.8rem;
+		font-weight: 700;
+	}
+	h5 {
+		min-width: 100%;
+		font-family: $font_2, $font_0;
+		display: block;
+		margin: 0.5em 0;
+		padding: 1em 0 1.5em;
+		border: 0;
+		color: $color_cornflower_approx;
+		font-family: $font_2, $font_0;
+		font-size: 3.2rem;
+		line-height: 1.35em;
+		text-align: center;
+	}
+	h6 {
+		min-width: 100%;
+		color: $color_silver_approx;
+		font-family: $font_2, $font_0;
+		margin: 0.5em 0 0.2em;
+		font-size: 2.8rem;
+		font-weight: 700;
+		font-size: 2.3rem;
+	}
+	ol {
+		min-width: 100%;
+	}
+	p {
+		min-width: 100%;
+	}
+	pre {
+		min-width: 100%;
+		overflow-x: auto;
+		margin: 1.5em 0 3em;
+		padding: 20px;
+		max-width: 100%;
+		border: 1px solid $black;
+		color: $color_catskill_white_approx;
+		font-size: 1.4rem;
+		line-height: 1.5em;
+		background: $color_cod_gray_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		code {
+			padding: 0;
+			font-size: inherit;
+			line-height: inherit;
+			background: 0 0;
+			color: $color_catskill_white_approx;
+			* {
+				color: inherit;
+			}
+		}
+	}
+	ul {
+		min-width: 100%;
+	}
+	li {
+		//Instead of the line below you could use @include word-break($value)
+		word-break: break-word;
+		p {
+			margin: 0;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	a {
+		color: $color_silver_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: $color_shakespeare_approx 0 -1px 0 inset;
+		&:hover {
+			color: $color_cornflower_approx;
+			text-decoration: none;
+		}
+	}
+	small {
+		display: inline-block;
+		line-height: 1.6em;
+	}
+	img {
+		display: block;
+		margin: 1.5em auto;
+		max-width: 1040px;
+		+ br + small {
+			display: block;
+			margin-top: -3em;
+			margin-bottom: 1.5em;
+		}
+	}
+	video {
+		display: block;
+		margin: 1.5em auto;
+		max-width: 1040px;
+	}
+	img[src$="#full"] {
+		max-width: none;
+		width: 100vw;
+	}
+	iframe {
+		margin: 0 auto;
+	}
+	code {
+		padding: 0 5px 2px;
+		font-size: 0.8em;
+		line-height: 1em;
+		background: $color_big_stone_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px;
+		font-weight: 400 !important;
+	}
+	.fluid-width-video-wrapper {
+		margin: 1.5em 0 3em;
+	}
+	hr {
+		margin: 4vw 0;
+	}
+	hr::after {
+		content: "";
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		display: block;
+		margin-left: -10px;
+		width: 1px;
+		height: 30px;
+		background: $color_outer_space_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: $color_shark_approx 0 0 0 5px;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(45deg);
+	}
+	table {
+		font-family: $font_2, $font_0;
+		display: inline-block;
+		overflow-x: auto;
+		margin: 0.5em 0 2.5em;
+		max-width: 100%;
+		width: auto;
+		border-spacing: 0;
+		border-collapse: collapse;
+		font-size: 1.6rem;
+		white-space: nowrap;
+		vertical-align: top;
+		background: radial-gradient(at left center, $black_20 0, transparent 75% ) 0 center/10px 100% no-repeat, radial-gradient(at right center, $black_20 0, transparent 75%) 100% center/10px 100%;
+		td {
+			padding: 6px 12px;
+			border: 1px solid $color_big_stone_approx;
+			&:first-child {
+				background-image: linear-gradient(90deg, $color_shark_approx 50%, rgba(28, 28, 33, 0));
+				background-size: 20px 100%;
+				background-repeat: no-repeat;
+			}
+			&:last-child {
+				background-image: linear-gradient(270deg, $color_shark_approx 50%, rgba(28, 28, 33, 0));
+				background-position: 100% 0;
+				background-size: 20px 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		th {
+			color: $color_silver_approx;
+			font-size: 1.2rem;
+			font-weight: 700;
+			letter-spacing: 0.2px;
+			text-align: left;
+			text-transform: uppercase;
+			background-color: $color_mine_shaft_approx;
+			padding: 6px 12px;
+			border: 1px solid $color_big_stone_approx;
+		}
+	}
+}
+font {
+	color: $color_silver_approx;
+}
+a {
+	@extend %extend_1;
+	background-color: transparent;
+	color: $color_cornflower_approx;
+	text-decoration: none;
+	&:active {
+		outline: 0;
+	}
+	&:hover {
+		outline: 0;
+		text-decoration: underline;
+	}
+}
+abbr {
+	@extend %extend_1;
+}
+acronym {
+	@extend %extend_1;
+}
+address {
+	@extend %extend_1;
+}
+applet {
+	@extend %extend_1;
+}
+article {
+	@extend %extend_1;
+}
+aside {
+	@extend %extend_1;
+}
+big {
+	@extend %extend_1;
+}
+caption {
+	@extend %extend_1;
+}
+cite {
+	@extend %extend_1;
+}
+del {
+	@extend %extend_1;
+}
+details {
+	@extend %extend_1;
+}
+div {
+	@extend %extend_1;
+}
+embed {
+	@extend %extend_1;
+}
+figcaption {
+	@extend %extend_1;
+}
+figure {
+	@extend %extend_1;
+}
+footer {
+	@extend %extend_1;
+}
+form {
+	@extend %extend_1;
+}
+header {
+	@extend %extend_1;
+}
+hgroup {
+	@extend %extend_1;
+}
+ins {
+	@extend %extend_1;
+}
+label {
+	@extend %extend_1;
+}
+mark {
+	@extend %extend_1;
+	background-color: $color_saratoga_approx;
+}
+menu {
+	@extend %extend_1;
+}
+nav {
+	@extend %extend_1;
+}
+object {
+	@extend %extend_1;
+}
+output {
+	@extend %extend_1;
+}
+q {
+	@extend %extend_1;
+	quotes: none;
+}
+ruby {
+	@extend %extend_1;
+}
+s {
+	@extend %extend_1;
+}
+section {
+	@extend %extend_1;
+}
+span {
+	@extend %extend_1;
+}
+strike {
+	@extend %extend_1;
+}
+summary {
+	@extend %extend_1;
+}
+table {
+	@extend %extend_1;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+tbody {
+	@extend %extend_1;
+}
+tfoot {
+	@extend %extend_1;
+}
+thead {
+	@extend %extend_1;
+}
+time {
+	@extend %extend_1;
+}
+tr {
+	@extend %extend_1;
+}
+tt {
+	@extend %extend_1;
+}
+var {
+	@extend %extend_1;
+}
+dfn {
+	@extend %extend_2;
+	margin: 0;
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	font-style: italic;
+}
+em {
+	@extend %extend_2;
+	margin: 0;
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	font-style: italic;
+}
+audio {
+	margin: 0;
+	line-height: inherit;
+	@extend %extend_3;
+	@extend %extend_5;
+	vertical-align: middle;
+}
+canvas {
+	margin: 0;
+	line-height: inherit;
+	@extend %extend_3;
+	@extend %extend_5;
+	vertical-align: middle;
+}
+iframe {
+	margin: 0;
+	line-height: inherit;
+	@extend %extend_3;
+	@extend %extend_5;
+	vertical-align: middle;
+}
+strong {
+	margin: 0;
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	font-weight: 700;
+}
+video {
+	margin: 0;
+	line-height: inherit;
+	@extend %extend_3;
+	@extend %extend_5;
+	vertical-align: middle;
+}
+blockquote {
+	border: 0;
+	margin: 1.5em 0;
+	padding: 0 1.6em;
+	border-left: 0.5em solid $color_big_stone_approx;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	quotes: none;
+	cite {
+		font-weight: 700;
+		a {
+			font-weight: 400;
+		}
+	}
+	p {
+		margin: 0.8em 0;
+		font-size: 1.2em;
+		font-weight: 300;
+	}
+	small {
+		display: inline-block;
+		margin: 0.8em 0 0.8em 1.5em;
+		font-size: 0.9em;
+		opacity: 0.8;
+	}
+	small::before {
+		content: "— ";
+	}
+}
+code {
+	@extend %extend_4;
+	font-family: $font_1, $font_1;
+	font-size: 1em;
+}
+kbd {
+	@extend %extend_4;
+	font-family: $font_1, $font_1;
+	font-size: 1em;
+}
+pre {
+	@extend %extend_4;
+	font-family: $font_1, $font_1;
+	font-size: 1em;
+}
+samp {
+	@extend %extend_4;
+	font-family: $font_1, $font_1;
+	font-size: 1em;
+}
+small {
+	@extend %extend_4;
+	font-size: 80%;
+}
+dd {
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0 0 5px;
+	text-align: left;
+}
+dl {
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0 0 1.5em;
+}
+dt {
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	float: left;
+	margin: 0 20px 0 0;
+	width: 120px;
+	color: $color_silver_approx;
+	font-weight: 500;
+	text-align: right;
+}
+ol {
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0 0 1.5em;
+	padding-left: 1.3em;
+	padding-right: 1.5em;
+	list-style: decimal;
+	ol {
+		margin: 0.5em 0 1em;
+	}
+	ul {
+		margin: 0.5em 0 1em;
+	}
+}
+p {
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0 0 1.5em;
+}
+ul {
+	line-height: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0 0 1.5em;
+	padding-left: 1.3em;
+	padding-right: 1.5em;
+	list-style: disc;
+	ol {
+		margin: 0.5em 0 1em;
+	}
+	ul {
+		margin: 0.5em 0 1em;
+	}
+}
+h2 {
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 1.5em 0 0.5em;
+	font-weight: 700;
+	line-height: 1.15;
+	text-rendering: optimizelegibility;
+	font-size: 2rem;
+}
+h3 {
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	line-height: 1.15;
+	text-rendering: optimizelegibility;
+	margin: 1.5em 0 0.5em;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+h4 {
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	line-height: 1.15;
+	text-rendering: optimizelegibility;
+	margin: 1.5em 0 0.5em;
+	font-weight: 500;
+	font-size: 1.6rem;
+}
+h5 {
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	line-height: 1.15;
+	text-rendering: optimizelegibility;
+	margin: 1.5em 0 0.5em;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+h6 {
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	line-height: 1.15;
+	text-rendering: optimizelegibility;
+	margin: 1.5em 0 0.5em;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+li {
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0.5em 0;
+	padding-left: 0.3em;
+	line-height: 1.6em;
+}
+fieldset {
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+h1 {
+	padding: 0;
+	border: 0;
+	@extend %extend_5;
+	margin: 0 0 0.5em;
+	font-size: 5rem;
+	vertical-align: baseline;
+	line-height: 1.15;
+	text-rendering: optimizelegibility;
+	font-weight: 700;
+}
+img {
+	padding: 0;
+	border: 0;
+	max-width: 100%;
+	margin: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: middle;
+}
+legend {
+	margin: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	padding: 0;
+}
+sub {
+	margin: 0;
+	font: inherit;
+	@extend %extend_6;
+	vertical-align: baseline;
+	bottom: -0.25em;
+}
+sup {
+	margin: 0;
+	font: inherit;
+	@extend %extend_6;
+	vertical-align: baseline;
+	top: -0.5em;
+}
+td {
+	vertical-align: baseline;
+	@extend %extend_7;
+	padding: 0;
+}
+th {
+	vertical-align: baseline;
+	@extend %extend_7;
+	padding: 0;
+}
+blockquote::after {
+	content: none;
+}
+blockquote::before {
+	content: none;
+}
+q::after {
+	content: none;
+}
+q::before {
+	content: none;
+}
+::after {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+}
+::before {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+}
+b {
+	font-weight: 700;
+}
+i {
+	font-style: italic;
+}
+svg {
+	vertical-align: middle;
+	&:not(:root) {
+		overflow: hidden;
+	}
+}
+optgroup {
+	@extend %extend_8;
+}
+input[type="reset"] {
+	cursor: pointer;
+}
+input[type="submit"] {
+	cursor: pointer;
+}
+button[disabled] {
+	cursor: default;
+}
+input[type="checkbox"] {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="radio"] {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	height: auto;
+}
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type="search"] {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button {
+}
+input[type="search"]::-webkit-search-decoration {
+}
+::selection {
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+	background: $color_nile_blue_approx;
+}
+.img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: 50% center;
+	background-size: cover;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 100%;
+}
+hr {
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	position: relative;
+	margin: 2.5em 0 3.5em;
+	height: 1px;
+	border-top: 1px solid $color_outer_space_approx;
+}
+@media(max-width: 500px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+	}
+	h3 {
+		font-size: 1.7rem;
+	}
+	.site-title {
+		font-size: 3rem;
+	}
+	.site-description {
+		font-size: 1.8rem;
+	}
+	.post-full-header {
+		padding: 14vw 3vw 10vw;
+	}
+	.post-full-content {
+		padding: 0;
+		h1 {
+			font-size: 2.8rem;
+		}
+		h2 {
+			font-size: 2.6rem;
+		}
+		h3 {
+			font-size: 2.2rem;
+		}
+		h4 {
+			font-size: 2.2rem;
+		}
+		h5 {
+			padding: 0 0 0.5em;
+			font-size: 2.2rem;
+		}
+		h6 {
+			font-size: 2rem;
+		}
+	}
+	.post-full-meta {
+		font-size: 1.2rem;
+		line-height: 1.3em;
+	}
+	.post-full-title {
+		font-size: 2.9rem;
+	}
+	.post-full-image {
+		margin-bottom: 4vw;
+		height: 350px;
+	}
+	.post-full-content::after {
+		display: none;
+	}
+	.post-full-content::before {
+		display: none;
+	}
+	.subscribe-form {
+		form {
+			flex-direction: column;
+		}
+		.form-group {
+			width: 100%;
+		}
+		button {
+			margin: 10px 0 0;
+			width: 100%;
+		}
+	}
+	.author-location {
+		display: none;
+	}
+	.author-stats {
+		display: none;
+	}
+	.site-header-content .author-bio {
+		font-size: 1.8rem;
+		line-height: 1.15em;
+		letter-spacing: 0;
+	}
+}
+.hidden {
+	visibility: hidden;
+	position: absolute;
+	text-indent: -9999px;
+}
+.site-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.site-main {
+	z-index: 100;
+	flex-grow: 1;
+}
+.outer {
+	position: relative;
+	padding: 0 4vw;
+}
+.inner {
+	margin: 0 auto;
+	max-width: 1040px;
+	width: 100%;
+}
+@media(min-width: 900px) {
+	.home-template {
+		.post-feed {
+			margin-top: -70px;
+			padding-top: 0;
+		}
+		.site-nav {
+			position: relative;
+			top: -70px;
+		}
+	}
+	.ctsingle {
+		.post-feed {
+			margin-top: -70px;
+			padding-top: 0;
+		}
+		.site-nav {
+			position: relative;
+			top: -70px;
+		}
+	}
+	.author-template .post-feed {
+		margin-top: -70px;
+		padding-top: 0;
+	}
+	.tag-template .post-feed {
+		margin-top: -70px;
+		padding-top: 0;
+	}
+}
+.site-header {
+	position: relative;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: $white;
+	background: 50% center/cover no-repeat $color_cod_gray_approx;
+	&.no-cover::after {
+		display: none;
+	}
+	&.no-cover::before {
+		display: none;
+	}
+}
+.site-header::before {
+	bottom: 0;
+	background: $black_18;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	display: block;
+}
+.site-header::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	display: block;
+	bottom: auto;
+	height: 80px;
+	background: linear-gradient($black_10, transparent);
+}
+.no-image {
+	.post-full-content::after {
+		display: none;
+	}
+	.post-full-content::before {
+		display: none;
+	}
+	.post-full-content {
+		padding-top: 0;
+	}
+}
+.site-header-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10vw 4vw;
+	min-height: 200px;
+	max-height: 450px;
+	text-align: center;
+	.author-profile-image {
+		z-index: 10;
+		flex-shrink: 0;
+		margin: 0 0 20px;
+		width: 100px;
+		height: 100px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: $color_shark_10_approx 0 0 0 6px;
+	}
+	.author-bio {
+		z-index: 10;
+		flex-shrink: 0;
+		margin: 5px 0 10px;
+		max-width: 600px;
+		font-size: 2rem;
+		line-height: 1.3em;
+		font-weight: 300;
+		letter-spacing: 0.5px;
+		opacity: 0.8;
+	}
+	.author-meta {
+		z-index: 10;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 0 10px;
+		font-family: $font_2, $font_0;
+		font-style: italic;
+	}
+	.bull {
+		display: inline-block;
+		margin: 0 12px;
+		opacity: 0.5;
+	}
+	.author-location svg {
+		height: 1.9rem;
+		stroke: $white;
+	}
+	.social-link:first-of-type {
+		padding-left: 4px;
+	}
+}
+.site-title {
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+	font-size: 3.8rem;
+	font-weight: 700;
+}
+.site-logo {
+	max-height: 45px;
+}
+.site-description {
+	z-index: 10;
+	margin: 0;
+	padding: 5px 0;
+	font-size: 2.2rem;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	opacity: 0.8;
+}
+.site-nav {
+	display: flex;
+	overflow-y: hidden;
+	position: relative;
+	z-index: 300;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 40px;
+	font-size: 1.2rem;
+}
+.site-nav-left {
+	display: flex;
+	overflow-y: hidden;
+	align-items: center;
+	overflow-x: auto;
+	margin-right: 10px;
+	padding-bottom: 80px;
+	letter-spacing: 0.4px;
+	white-space: nowrap;
+}
+.site-nav-logo {
+	flex-shrink: 0;
+	display: block;
+	margin-right: 24px;
+	padding: 11px 0;
+	color: $white;
+	font-size: 1.7rem;
+	line-height: 1em;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	&:hover {
+		text-decoration: none;
+	}
+	img {
+		display: block;
+		width: auto;
+		height: 21px;
+	}
+}
+.nav {
+	display: flex;
+	margin: 0 0 0 -12px;
+	padding: 0;
+	list-style: none;
+	li {
+		display: block;
+		margin: 0;
+		font-weight: 600;
+		padding: 0;
+		text-transform: uppercase;
+		a {
+			display: block;
+			margin: 0;
+			font-weight: 600;
+			padding: 10px 12px;
+			color: $white;
+			opacity: 0.9;
+			&:hover {
+				text-decoration: none;
+				opacity: 1;
+			}
+		}
+	}
+}
+.social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 10px;
+	color: $white;
+	opacity: 0.8;
+	&:hover {
+		opacity: 1;
+	}
+	svg {
+		height: 1.8rem;
+		fill: $white;
+	}
+}
+.site-nav-right {
+	height: 40px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+}
+.social-links {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	a:last-of-type {
+		padding-right: 20px;
+	}
+}
+.subscribe-button {
+	display: block;
+	padding: 4px 10px;
+	border: 1px solid $color_shark_approx;
+	color: $white;
+	font-size: 1.2rem;
+	line-height: 1em;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	opacity: 0.8;
+	&:hover {
+		text-decoration: none;
+		opacity: 1;
+	}
+}
+.rss-button {
+	opacity: 0.8;
+	&:hover {
+		opacity: 1;
+	}
+	svg {
+		margin-bottom: 1px;
+		height: 2.1rem;
+		fill: $white;
+	}
+}
+@media(max-width: 700px) {
+	.site-header {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.site-nav-left {
+		margin-right: 0;
+		padding-left: 4vw;
+	}
+	.site-nav-right {
+		display: none;
+	}
+}
+.post-feed {
+	position: relative;
+	flex-wrap: wrap;
+	margin: 0 -20px;
+	padding: 40px 0 0;
+	display: flex;
+}
+.post-card {
+	display: flex;
+	flex: 1 1 300px;
+	flex-direction: column;
+	overflow: hidden;
+	margin: 0 20px 40px;
+	min-height: 300px;
+	background: 50% center/cover $color_shark_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: $color_mine_shaft_6_approx 8px 14px 38px, $color_mine_shaft_3_approx 1px 3px 8px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s ease 0s;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: $color_mine_shaft_10_approx 0 0 1px, $color_mine_shaft_7_approx 0 3px 16px;
+	}
+}
+.post-card-image-link {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px 5px 0 0;
+}
+.post-card-image {
+	width: auto;
+	height: 200px;
+	background: 50% center/cover no-repeat $color_limed_spruce_approx;
+}
+.post-card-content-link {
+	position: relative;
+	display: block;
+	padding: 25px 25px 0;
+	color: $color_silver_approx;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.post-card-tags {
+	display: block;
+	margin-bottom: 4px;
+	color: $color_loblolly_approx;
+	font-size: 1.2rem;
+	line-height: 1.15em;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+.post-card-title {
+	margin-top: 0;
+}
+.post-card-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.post-card-excerpt {
+	font-family: $font_2, $font_0;
+}
+.post-card-meta {
+	padding: 0 25px 25px;
+}
+.author-profile-image {
+	margin-right: 5px;
+	width: 25px;
+	height: 25px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 100%;
+	object-fit: cover;
+}
+.post-card-author {
+	font-size: 1.3rem;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+@media(min-width: 795px) {
+	.home-template .post-feed .post-card:nth-child(6n + 1):not(.no-image) {
+		flex: 1 1 100%;
+		flex-direction: row;
+		.post-card-image-link {
+			position: relative;
+			flex: 1 1 auto;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px 0 0 5px;
+		}
+		.post-card-image {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.post-card-content {
+			flex: 0 1 357px;
+		}
+		h2 {
+			font-size: 2.6rem;
+		}
+		p {
+			font-size: 1.8rem;
+			line-height: 1.55em;
+		}
+		.post-card-content-link {
+			padding: 30px 40px 0;
+		}
+		.post-card-meta {
+			padding: 0 40px 30px;
+		}
+	}
+	.ctsingle .post-feed p {
+		font-size: 1.8rem;
+		line-height: 1.55em;
+	}
+}
+@media(max-width: 650px) {
+	.post-feed {
+		padding-top: 5vw;
+	}
+	.post-card {
+		margin: 0 20px 5vw;
+	}
+	.subscribe-form-title {
+		font-size: 2.4rem;
+	}
+	.site-footer-content {
+		flex-direction: column;
+	}
+	.hide {
+		display: none !important;
+	}
+	.copyright {
+		text-align: center;
+	}
+	.subscribe-form p {
+		font-size: 1.6rem;
+	}
+	.site-footer-nav a:first-child {
+		margin-left: 0;
+	}
+}
+.post-template {
+	.site-main {
+		padding-bottom: 4vw;
+		background: $color_shark_approx;
+	}
+	.kg-card-markdown > p:first-child {
+		font-size: 1.25em;
+		line-height: 1.5em;
+	}
+}
+.post-full {
+	position: relative;
+	z-index: 50;
+}
+.post-full-header {
+	margin: 0 auto;
+	padding: 6vw 3vw 3vw;
+	max-width: 1040px;
+	text-align: center;
+}
+.post-full-meta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $color_loblolly_approx;
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.post-full-meta-date {
+	color: $color_cornflower_approx;
+}
+.post-full-title {
+	margin: 0;
+	color: $color_silver_approx;
+}
+.date-divider {
+	display: inline-block;
+	margin: 0 6px 1px;
+}
+.post-full-image {
+	margin: 0 -10vw -165px;
+	height: 800px;
+	background: 50% center/cover $color_limed_spruce_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+}
+@media(max-width: 1170px) {
+	.post-full-image {
+		margin: 0 -4vw -100px;
+		height: 600px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.post-full-content {
+		padding: 5vw 7vw 0;
+	}
+}
+@media(max-width: 800px) {
+	.post-full-image {
+		height: 400px;
+	}
+	.post-full-content {
+		font-size: 1.9rem;
+	}
+	.floating-header-logo {
+		margin-left: 10px;
+		a {
+			color: $color_silver_approx;
+		}
+	}
+	.floating-header-divider {
+		visibility: hidden;
+	}
+	.floating-header-title {
+		visibility: hidden;
+	}
+	.error-description {
+		margin: 5px 0 0;
+		font-size: 1.8rem;
+	}
+}
+.post-full-content::before {
+	left: -5px;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(-5deg);
+	content: "";
+	position: absolute;
+	top: 15px;
+	z-index: -1;
+	display: block;
+	width: 20px;
+	height: 200px;
+	background: $color_mine_shaft_15_approx;
+	filter: blur(5px);
+}
+.post-full-content::after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	z-index: -1;
+	display: block;
+	width: 20px;
+	height: 200px;
+	background: $color_mine_shaft_15_approx;
+	filter: blur(5px);
+	right: -5px;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(5deg);
+}
+.kg-card-markdown {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 920px;
+}
+.footnotes {
+	min-width: 100%;
+	font-size: 1.5rem;
+	p {
+		margin: 0;
+	}
+}
+.post-full-comments {
+	min-width: 100%;
+	margin: 0 auto;
+	max-width: 840px;
+}
+@media(max-width: 1040px) {
+	.post-full-content {
+		img {
+			width: 100%;
+		}
+		video {
+			width: 100%;
+		}
+	}
+}
+@media(min-width: 1180px) {
+	.post-full-content h5 {
+		max-width: 1060px;
+		width: 100vw;
+	}
+}
+.footnotes-sep {
+	margin-bottom: 30px;
+}
+.footnote-backref {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: $color_cornflower_approx !important;
+	text-decoration: none !important;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none !important;
+}
+.subscribe-form {
+	margin: 1.5em 0;
+	padding: 6.5vw 7vw 7vw;
+	border: 1px solid $color_big_stone_approx;
+	text-align: center;
+	background: $color_mine_shaft_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 7px;
+	p {
+		margin-bottom: 1em;
+		color: $color_loblolly_approx;
+		font-size: 2.2rem;
+		line-height: 1.55em;
+		letter-spacing: 0.2px;
+	}
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		max-width: 420px;
+	}
+	.form-group {
+		flex-grow: 1;
+	}
+	button {
+		display: inline-block;
+		margin: 0 0 0 10px;
+		padding: 0 20px;
+		height: 41px;
+		outline: 0;
+		color: $white;
+		font-size: 1.5rem;
+		line-height: 37px;
+		font-weight: 400;
+		text-align: center;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: $black_10 0 -1px 0;
+		background: linear-gradient($color_boston_blue_approx, $color_shakespeare_approx 60%, $color_shakespeare_approx 90%, $color_shakespeare_approx);
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: $black_14 0 0 0 1px inset;
+		&:active {
+			background: $color_curious_blue_approx;
+		}
+		&:focus {
+			background: $color_curious_blue_approx;
+		}
+	}
+}
+.subscribe-form-title {
+	margin: 0 0 3px;
+	padding: 0;
+	color: $color_silver_approx;
+	font-size: 3.5rem;
+	line-height: 1;
+	font-weight: 700;
+}
+.subscribe-email {
+	display: block;
+	padding: 10px;
+	width: 100%;
+	border: 1px solid $color_limed_spruce_approx;
+	color: $color_loblolly_approx;
+	font-size: 1.8rem;
+	line-height: 1em;
+	font-weight: 400;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: text;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: border-color 0.15s linear 0s;
+	&:focus {
+		outline: 0;
+		border-color: $color_limed_spruce_approx;
+	}
+}
+.subscribe-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $color_black_pearl_97_approx;
+	opacity: 0;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity 0.2s ease-in 0s;
+	pointer-events: none;
+	backdrop-filter: blur(3px);
+	button {
+		display: inline-block;
+		margin: 0 0 0 15px;
+		padding: 0 25px;
+		height: 52px;
+		outline: 0;
+		color: $white;
+		font-size: 1.7rem;
+		line-height: 37px;
+		font-weight: 400;
+		text-align: center;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: $black_10 0 -1px 0;
+		background: linear-gradient($color_boston_blue_approx, $color_shakespeare_approx 60%, $color_shakespeare_approx 90%, $color_shakespeare_approx);
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 8px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: $black_14 0 0 0 1px inset;
+		&:active {
+			background: $color_curious_blue_approx;
+		}
+		&:focus {
+			background: $color_curious_blue_approx;
+		}
+	}
+	&:target {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		max-width: 500px;
+	}
+	.form-group {
+		flex-grow: 1;
+	}
+	.subscribe-email {
+		display: block;
+		padding: 14px 20px;
+		width: 100%;
+		border: 0;
+		color: $color_loblolly_approx;
+		font-size: 2rem;
+		line-height: 1em;
+		font-weight: 400;
+		letter-spacing: 0.5px;
+		//Instead of the line below you could use @include user-select($select)
+		user-select: text;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 8px;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: border-color 0.15s linear 0s;
+	}
+}
+.post-full-footer {
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 3vw 0 6vw;
+	max-width: 840px;
+	display: flex;
+	align-items: center;
+}
+.author-card {
+	display: flex;
+	align-items: center;
+	.author-profile-image {
+		margin-right: 15px;
+		width: 60px;
+		height: 60px;
+	}
+}
+.author-card-name {
+	margin: 0 0 2px;
+	padding: 0;
+	font-size: 2rem;
+	a {
+		color: $color_silver_approx;
+		font-weight: 700;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.floating-header-logo {
+	overflow: hidden;
+	margin: 0 0 0 20px;
+	font-size: 1.6rem;
+	line-height: 1em;
+	letter-spacing: -1px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	a {
+		display: flex;
+		align-items: center;
+		color: $color_silver_approx;
+		line-height: 1.1em;
+		font-weight: 700;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	img {
+		margin: 0 10px 0 0;
+		max-height: 20px;
+	}
+}
+.read-next-card-header-title {
+	margin: 0;
+	padding: 0 20px;
+	color: $white;
+	font-size: 3rem;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	a {
+		color: $white;
+		font-weight: 300;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.post-full-footer-right {
+	flex-shrink: 0;
+	margin-left: 20px;
+}
+.author-card-button {
+	display: block;
+	padding: 9px 16px;
+	border: 1px solid $color_nevada_approx;
+	color: $color_loblolly_approx;
+	font-size: 1.2rem;
+	line-height: 1;
+	font-weight: 500;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.2s ease 0s;
+	&:hover {
+		border-color: $color_shakespeare_approx;
+		color: $color_cornflower_approx;
+		text-decoration: none;
+	}
+}
+.read-next-feed {
+	flex-wrap: wrap;
+	margin: 0 -20px;
+	padding: 40px 0 0;
+	display: flex;
+}
+.read-next-card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	flex: 1 1 300px;
+	overflow: hidden;
+	margin: 0 20px 40px;
+	padding: 25px;
+	color: $white;
+	background: 50% center/cover $color_cod_gray_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: $color_mine_shaft_6_approx 8px 14px 38px, $color_mine_shaft_3_approx 1px 3px 8px;
+}
+.read-next-card-content {
+	position: relative;
+	display: flex;
+	z-index: 50;
+	flex-grow: 1;
+	font-size: 1.7rem;
+	ul {
+		flex-direction: column;
+		display: flex;
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+		list-style: none;
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		font-size: 1.6rem;
+		line-height: 1.25em;
+		font-weight: 200;
+		letter-spacing: -0.5px;
+		a {
+			display: block;
+			padding: 20px 0;
+			border-bottom: 1px solid $color_shark_30_approx;
+			color: $white;
+			font-weight: 500;
+			vertical-align: top;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity 0.3s ease 0s;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&:first-of-type a {
+			padding-top: 10px;
+		}
+	}
+}
+.read-next-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	background: linear-gradient(135deg, $color_firefly_80_approx, $color_black_pearl_70_approx );
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	backdrop-filter: blur(2px);
+}
+.read-next-card-header {
+	position: relative;
+	z-index: 50;
+	padding-top: 20px;
+	text-align: center;
+}
+.read-next-card-header-sitetitle {
+	display: block;
+	font-size: 1.3rem;
+	line-height: 1.3em;
+	opacity: 0.8;
+}
+.read-next-divider {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height: 80px;
+	svg {
+		width: 40px;
+		fill: transparent;
+		stroke: $white;
+		stroke-width: 0.5px;
+		stroke-opacity: 0.65;
+	}
+}
+.read-next-card-footer {
+	position: relative;
+	margin: 15px 0 3px;
+	text-align: center;
+	a {
+		color: $white;
+	}
+}
+.floating-header {
+	display: flex;
+	align-items: center;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	height: 60px;
+	border-bottom: 1px solid $black_6;
+	background: $color_shark_95_approx;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(0, -120%, 0);
+}
+.floating-active {
+	visibility: visible;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s cubic-bezier(0.22, 1, 0.27, 1) 0s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+}
+.floating-header-divider {
+	margin: 0 5px;
+	line-height: 1em;
+}
+.floating-header-title {
+	flex: 1 1 0;
+	overflow: hidden;
+	margin: 0;
+	color: $color_silver_approx;
+	font-size: 1.6rem;
+	line-height: 1.3em;
+	font-weight: 700;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.floating-header-share {
+	justify-content: flex-end;
+	padding-left: 2%;
+	font-size: 1.3rem;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	svg {
+		width: auto;
+		height: 16px;
+		fill: $white;
+	}
+}
+.floating-header-share-label {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	margin-right: 10px;
+	color: $color_silver_70_approx;
+	font-weight: 500;
+	svg {
+		margin: 0 5px 0 10px;
+		width: 18px;
+		height: 18px;
+		stroke: $black_70;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(90deg);
+	}
+}
+.floating-header-share-fb {
+	display: block;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	color: $white;
+	line-height: 48px;
+	text-align: center;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	background: $color_blumine_approx;
+}
+.floating-header-share-tw {
+	display: block;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	color: $white;
+	line-height: 48px;
+	text-align: center;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	background: $color_shakespeare_approx;
+}
+.progress {
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	border: 0;
+	color: $color_cornflower_approx;
+	background: 0 0;
+}
+.progress::-webkit-progress-bar {
+	background-color: transparent;
+}
+.progress::-webkit-progress-value {
+	background-color: $color_shakespeare_approx;
+}
+.progress-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: transparent;
+}
+.progress-bar {
+	display: block;
+	width: 50%;
+	height: inherit;
+	background-color: $color_shakespeare_approx;
+}
+@media(max-width: 900px) {
+	.floating-header {
+		height: 40px;
+	}
+	.floating-header-logo {
+		font-size: 1.5rem;
+	}
+	.floating-header-title {
+		font-size: 1.5rem;
+	}
+	.floating-header-share-fb {
+		width: 40px;
+		height: 40px;
+		line-height: 38px;
+	}
+	.floating-header-share-tw {
+		width: 40px;
+		height: 40px;
+		line-height: 38px;
+	}
+}
+@media(max-width: 450px) {
+	.floating-header-share-label {
+		display: none;
+	}
+}
+.error-template {
+	.site-main {
+		padding: 7vw 4vw;
+	}
+	.post-feed {
+		padding-top: 0;
+	}
+}
+.site-nav-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	.site-nav-logo {
+		margin-right: 0;
+	}
+}
+.error-message {
+	text-align: center;
+}
+.error-code {
+	margin: 0;
+	font-size: 12vw;
+	line-height: 1em;
+	letter-spacing: -5px;
+	opacity: 0.3;
+}
+.error-description {
+	margin: 0;
+	color: $color_loblolly_approx;
+	font-size: 3rem;
+	line-height: 1.3em;
+	font-weight: 400;
+}
+.error-link {
+	display: inline-block;
+	margin-top: 5px;
+}
+.subscribe-overlay-content {
+	position: relative;
+	z-index: 9999;
+	margin: 0 0 5vw;
+	padding: 4vw;
+	color: $white;
+	text-align: center;
+}
+.subscribe-overlay-logo {
+	position: fixed;
+	top: 23px;
+	left: 30px;
+	height: 30px;
+}
+.subscribe-overlay-title {
+	display: inline-block;
+	margin: 0 0 10px;
+	font-size: 6rem;
+	line-height: 1.15em;
+}
+.subscribe-overlay-description {
+	margin: 0 auto 50px;
+	max-width: 650px;
+	font-family: $font_2, $font_0;
+	font-size: 3rem;
+	line-height: 1.3em;
+	font-weight: 300;
+	opacity: 0.8;
+}
+.subscribe-overlay-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	&:hover {
+		cursor: default;
+	}
+}
+.subscribe-overlay-close::before {
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(45deg);
+	content: "";
+	position: absolute;
+	top: 40px;
+	right: 25px;
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: $color_shark_approx;
+	opacity: 0.8;
+}
+.subscribe-overlay-close::after {
+	content: "";
+	position: absolute;
+	top: 40px;
+	right: 25px;
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: $color_shark_approx;
+	opacity: 0.8;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(-45deg);
+}
+.site-footer {
+	position: relative;
+	padding-top: 20px;
+	color: $white;
+	background: $black;
+	padding-bottom: 20px !important;
+}
+.site-footer-content {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.3rem;
+	display: flex;
+	color: $white_70;
+	a {
+		color: $white_70;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+.site-footer-nav {
+	display: flex;
+	width: 100%;
+	a {
+		margin-left: 20px;
+		&:first-of-type::before {
+			display: none;
+		}
+	}
+	a::before {
+		content: "";
+		position: absolute;
+		top: 11px;
+		left: -11px;
+		display: block;
+		width: 2px;
+		height: 2px;
+		background: $color_shark_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 100%;
+	}
+}
+.pagination {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: 1rem auto;
+	font-size: 1.3rem;
+	color: $color_loblolly_approx;
+	text-align: center;
+	a {
+		color: $color_loblolly_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.2s ease 0s;
+	}
+}
+.page-number {
+	display: inline-block;
+	padding: 2px 0;
+	min-width: 100px;
+}
+.newer-posts {
+	position: absolute;
+	display: inline-block;
+	padding: 0 15px;
+	border: 1px dashed $color_mine_shaft_approx;
+	text-decoration: none;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: border 0.3s ease 0s;
+	left: 0;
+}
+.older-posts {
+	position: absolute;
+	display: inline-block;
+	padding: 0 15px;
+	border: 1px dashed $color_mine_shaft_approx;
+	text-decoration: none;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: border 0.3s ease 0s;
+	right: 0;
+}
+.pull-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+.footerImage {
+	width: 60%;
+	margin: 5em auto;
+}
+.home-template .site-header::after {
+	display: none;
+}
+.social-link-fb svg {
+	height: 1.5rem;
+}
+.social-link-wb svg {
+	height: 1.6rem;
+	path {
+		stroke: $white;
+	}
+}
+.social-link-rss svg {
+	height: 1.9rem;
+}
+.page-template .site-main {
+	padding-bottom: 4vw;
+	background: $color_shark_approx;
+}
+.author-card-content p {
+	margin: 0;
+	color: $color_loblolly_approx;
+	line-height: 1.3em;
+}
+.nav-current a:visited {
+	color: $color_primrose_approx;
+}

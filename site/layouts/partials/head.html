@@ -29,8 +29,12 @@
     {{ partial "meta-twitter" . }}
     {{ partial "meta-facebook" . }}
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
     {{ "<!-- Stylesheets -->" | safeHTML }}
-    <link rel="stylesheet" type="text/css" href="{{ "css/dark.css" | absURL}}" /> 
+    {{ $style := resources.Get "main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 
     {{ if .Site.Params.RSSLink}}<link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{else}}{{ if eq .URL "/" }}<link href="{{ "index.xml" | absURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }} {{ end }}
 

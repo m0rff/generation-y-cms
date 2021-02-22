@@ -2,7 +2,7 @@ baseurl         = "/"
 languageCode    = "de-DE"
 paginate        = 15
 canonifyurls    = true
-
+assetDir = "static/assets"
 
 [params]
   title       = ""
