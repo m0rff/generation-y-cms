@@ -1,5 +1,8 @@
 {{ partial "head" . }}
 
+{{ $releases := (where .Site.Pages "Type" "release") }}
+{{ $artist := . }}
+
 <body class="ctsingle">
   <div class="site-wrapper">
 
@@ -26,13 +29,32 @@
                   {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
                     #{{$tag}} {{end}} </span>
                   {{ end }}
-                  <h2 class="post-card-title">{{.Params.name}}</h2>
+                  <h1 class="post-card-title">{{.Params.name}}</h1> <strong>({{.Params.description}})</strong>
                 </header>
               </a>
               <section class="post-card-excerpt" style="padding: 0 25px;">
-                <img src="{{.Params.portrait | absURL}}" width="512">
-                {{ .Content }}
-                <img src="{{.Params.image | absURL}}" width="100%">
+                  {{if .Params.portrait}}
+                    <img src="{{.Params.portrait | absURL}}" width="512">
+                  {{end}}
+                    {{ .Content }}
+
+                    <h4>Releases</h4>
+                    <ul>
+                      {{range $releases}}
+                      {{$release := .}}
+                        {{range .Params.artists}}
+                          {{ if eq .artist $artist.Params.name }}
+                          <li>
+                            <a class="release" href="{{.Permalink}}">{{$release.Params.title}}</a> ({{ $release.Date.Format "2006" }})
+                          </li>
+                          {{ end }}
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+
+                  {{if .Params.image}}
+                  <img src="{{.Params.image | absURL}}" width="100%">
+                  {{end}}
               </section>
             </div>
         </div>

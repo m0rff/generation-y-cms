@@ -4,10 +4,10 @@ slug: house
 name: House
 cover:
 image:
-color1:
-color2:
-color3:
-color4:
+color1: "#ABDE75"
+color2: "#F19952"
+color3: "#7EE7FA"
+color4: "#827E9F"
 ---
 
 

@@ -31,6 +31,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Cover", name: "cover", widget: "image", required: false}
       - {label: "Portrait", name: "portrait", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Instagram", name: "instagram", widget: "string", required: false}
+      - {label: "Facebook", name: "facebook", widget: "string", required: false}
+      - {label: "Youtube", name: "youtube", widget: "string", required: false}
+      - {label: "Bandcamp", name: "bandcamp", widget: "string", required: false}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false}
+      - {label: "Soundcloud", name: "soundcloud", widget: "string", required: false}
+      - {label: "Beatport", name: "beatport", widget: "string", required: false}
+      - {label: "Spotify", name: "spotify", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "release" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Release" # Used in the UI, ie.: "New Post"
@@ -44,6 +53,13 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Cover", name: "cover", widget: "image", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "FooterImage", name: "footerImage", widget: "image", required: false}
+      - {label: "Bandcamp", name: "bandcamp", widget: "string", required: false}
+      - {label: "Spotify", name: "spotify", widget: "string", required: false}
+      - {label: "Youtube", name: "youtube", widget: "string", required: false}
+      - {label: "Deezer", name: "deezer", widget: "string", required: false}
+      - {label: "Beatport", name: "beatport", widget: "string", required: false}
+      - {label: "Soundcloud", name: "soundcloud", widget: "string", required: false}
+      - {label: "Vimeo", name: "vimeo", widget: "string", required: false}
       - label: "Artists"
         name: "artists"
         widget: "list"

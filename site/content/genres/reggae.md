@@ -1,4 +1,5 @@
 ---
+type: genre
 name: Reggae
 slug: reggae
 color1: "#2a5f41"

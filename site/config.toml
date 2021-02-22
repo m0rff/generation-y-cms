@@ -1,6 +1,6 @@
 baseurl         = "/"
 languageCode    = "de-DE"
-paginate        = 6
+paginate        = 15
 canonifyurls    = true
 
 

@@ -1,10 +1,8 @@
 ---
 footerImage: img/HellsKitchenWIP.png
-genre: null
-artist: null
 title: Hell's Kitchen
 slug: hellskitchen
-date: 2014-09-26
+date: 2020-09-26
 cover: img/HellsKitchenWIP.png
 image: img/HellsKitchenWIP.png
 artists:
@@ -15,7 +13,15 @@ artists:
 genres:
   - genre: Psytrance
 type: release
-linktitle: Hell's Kitchen
+linktitle: "Hell's Kitchen"
+bandcamp:
+spotify:
+youtube:
+deezer:
+beatport:
+soundcloud:
+vimeo:
+    
 ---
 
 

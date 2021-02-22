@@ -1,10 +1,10 @@
 ---
 type: artist
-slug: morf
-name: Morf
-description: Producer, DJ, Nerd
-cover: 
-image: 
+slug: beat
+name: Beat
+description: Producer, Mastering
+cover:
+image:
 portrait:
 instagram:
 facebook:
@@ -14,6 +14,7 @@ twitter:
 soundcloud:
 beatport:
 spotify:
+
 ---
 
 Lorem Ipsum

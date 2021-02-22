@@ -1,4 +1,5 @@
 ---
+type: genre
 name: NewSkool
 slug: newskool
 color1: "#772d8c"

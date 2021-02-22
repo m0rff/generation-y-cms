@@ -1,10 +1,10 @@
 ---
 type: artist
-slug: morf
-name: Morf
-description: Producer, DJ, Nerd
-cover: 
-image: 
+slug: phillip
+name: Phillip
+description:
+cover:
+image:
 portrait:
 instagram:
 facebook:

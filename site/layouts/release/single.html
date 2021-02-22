@@ -1,6 +1,10 @@
 {{ partial "head" . }}
 
 {{ $artist := index (.Params.artists) 0}}
+{{ $mainArtists := (where (where $.Site.Pages "Type" "artist") ".Params.name" "=" $artist.artist) }}
+{{ $mainArtist := index ($mainArtists) 0}}
+{{ $releaseArtists := .Params.artists}}
+
 {{ $genre := index (.Params.genres) 0}}
 
 {{ $genres := (where (where .Site.Pages "Type" "genre") ".Params.name" "=" $genre.genre) }}
@@ -23,21 +27,35 @@
             {{end}}
 
             <div class="post-card-content" style="background-color: {{$genre.Params.color1}}">
-              <a class="post-card-content-link" href="{{ .Permalink }}">
                 <header class="post-card-header">
                   {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
                     #{{$tag}} {{end}} </span>
                   {{ end }}
-                    <h5 style="color: {{$genre.Params.color3}}">{{$genre.Params.name}}</h5>
-                  <h1 class="post-card-title" style="color: {{$genre.Params.color4}}">{{$artist.artist}}: {{.Title}}</h1>
+                  <a class="genre" href="{{$genre.Permalink}}">
+                    <span style="color: {{$genre.Params.color3}}">{{$genre.Params.name}}</h5>
+                  </a>
+                  <h1 class="post-card-title" style="color: {{$genre.Params.color4}}">{{.Title}}</h1>
                 </header>
-              </a>
               <section class="post-card-excerpt" style="padding: 0 25px;color: {{$genre.Params.color2}}">
                 <div style="width:100%;">
                   <div style="float:left;width:30%;">
                     <img src="{{.Params.image | absURL}}" width="256">
                   </div>
                   <div style="float:none;">
+                    <span class="artists">
+                      <a class="artist" href="{{$mainArtist.Permalink}}">
+                        {{$artist.artist}}
+                      </a>
+                      with
+                      {{ range $index, $value := $releaseArtists}}
+                      {{ $artists := (where (where $.Site.Pages "Type" "artist") ".Params.name" "=" $value.artist) }}
+                      {{ $artistPage := index ($artists) 0}}
+                      {{ if ne $value.artist $artist.artist }}
+                        <a class="artist" href="{{ $artistPage.Permalink }}">{{.artist}}</a>{{ $max := add (len $releaseArtists) -2 }}{{if lt $index $max }},{{end}}
+                       {{if eq $index $max }}and{{end}}
+                      {{ end }}
+                    {{end}}
+                    </div>
                     {{ .Content }}
                   </div>
               </section>

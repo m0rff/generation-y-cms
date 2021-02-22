@@ -1,10 +1,10 @@
 ---
 type: artist
-slug: morf
-name: Morf
-description: Producer, DJ, Nerd
-cover: 
-image: 
+slug: didi
+name: Didi
+description:
+cover:
+image:
 portrait:
 instagram:
 facebook:

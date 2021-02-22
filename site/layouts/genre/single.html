@@ -1,7 +1,6 @@
 {{ partial "head" . }}
 
-{{ $genres := (where (where .Site.Pages "Type" "genre") ".Params.name" "=" .Params.name) }}
-{{ $genre := index ($genres) 0}}
+{{ $genre := . }}
 
 <body class="ctsingle">
   <div class="site-wrapper">
@@ -29,6 +28,21 @@
               </a>
               <section class="post-card-excerpt" style="padding: 0 25px; color: {{$genre.Params.color2}}" >
                     {{ .Content }}
+
+                  {{ $releases := (where .Site.Pages "Type" "release") }}
+                  {{ range $releases }}
+                      <ul>
+                          {{$release := .}}
+                          {{range .Params.genres}}
+                              {{ if eq .genre $genre.Params.name }}
+                                {{$artist := index ($release.Params.artists) 0 }}
+                                <a href="{{$release.Permalink}}">
+                                  <li>{{$artist.artist}} - {{$release.Params.title}} ({{$release.Params.date.Format "2006"}})</li>
+                                </a>
+                              {{end}}
+                          {{end}}
+                      </ul>
+                  {{ end }}
               </section>
         </div>
         </article>

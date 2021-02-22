@@ -2,9 +2,18 @@
 type: artist
 slug: vio
 name: Vio
+description: Singer
 cover: 
 image: 
-portrait: 
+portrait:
+instagram:
+facebook:
+youtube:
+bandcamp:
+twitter:
+soundcloud:
+beatport:
+spotify:
 ---
 
 Lorem Ipsum

@@ -4,11 +4,11 @@ slug: dnb
 name: Drum'n'Bass
 cover:
 image:
-color1:
-color2:
-color3:
-color4:
+color1: "#008DD5"
+color2: "#4B4B67"
+color3: "#D8D8D8"
+color4: "#C3F970"
 ---
 
 
-Kickbassbassbass
+Amen brother
