@@ -1,7 +1,7 @@
 ---
 type: genre
 slug: psytrance
-title: Psytrance
+name: Psytrance
 cover:
 image:
 color1:

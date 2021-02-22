@@ -1,7 +1,7 @@
 ---
 type: genre
 slug: hiphop
-title: Hip Hop
+name: Hip Hop
 cover:
 image:
 color1:

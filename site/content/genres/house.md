@@ -1,7 +1,7 @@
 ---
 type: genre
 slug: house
-title: House
+name: House
 cover:
 image:
 color1:

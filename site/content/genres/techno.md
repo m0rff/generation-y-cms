@@ -1,7 +1,7 @@
 ---
 type: genre
 slug: techno
-title: Techno
+name: Techno
 cover:
 image:
 color1:
