@@ -13,7 +13,7 @@ cover = "img/20200704_065352.jpg"
 weight = 111
 
 +++
-> „Wir lieben es mit anderen Künstlern zusammen zu erschaffen.“
+> Wir lieben es mit anderen Künstlern zusammen zu erschaffen.
 
 Die Wurzeln von „Generation Y Production“ liegen im Jahr 2015. Bo und Wayne begründeten das Musikprojekt „Pandora 2015-2016“. 2016 benannte sich das Duo in „Generation Y“ um.
 

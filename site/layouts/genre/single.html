@@ -23,7 +23,7 @@
                   {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
                     #{{$tag}} {{end}} </span>
                   {{ end }}
-                  <h2 class="post-card-title" style="color: {{$genre.Params.color4}}">{{.Params.name}}</h2>
+                  <h1 class="post-card-title" style="color: {{$genre.Params.color4}}">{{.Params.name}}</h2>
                 </header>
               </a>
               <section class="post-card-excerpt" style="padding: 0 25px; color: {{$genre.Params.color2}}" >

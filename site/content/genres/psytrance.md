@@ -2,8 +2,8 @@
 type: genre
 slug: psytrance
 name: Psytrance
-cover:
-image:
+cover: img/psytrance.jpg
+image: 
 color1: "#1F201A"
 color2: "#C6A15B"
 color3: "#844C27"
