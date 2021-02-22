@@ -9,7 +9,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    identifier_field: slug
+    identifier_field: title
     fields: # The fields each document in this collection have
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Artist" # Used in the UI, ie.: "New Post"
     folder: "site/content/artists" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    identifier_field: slug
+    identifier_field: name
     fields: # The fields each document in   this collection have
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Release" # Used in the UI, ie.: "New Post"
     folder: "site/content/releases" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    identifier_field: slug
+    identifier_field: title
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
@@ -48,24 +48,24 @@ collections: # A list of collections the CMS should be able to edit
         name: "artist"
         widget: "relation"
         collection: "artist"
-        search_fields: ['slug']
-        value_field: "{{slug}}"
+        search_fields: ['name']
+        value_field: "{{name}}"
         display_fields: ["{{name}}"]  
       - label: "Genre"
         name: "genre"
         widget: "relation"
         collection: "genre"
-        search_fields: ['slug']
-        value_field: "{{slug}}"
+        search_fields: ['name']
+        value_field: "{{name}}"
         display_fields: ["{{name}}"]
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "genre" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Genre" # Used in the UI, ie.: "New Post"
     folder: "site/content/genres" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    identifier_field: slug
+    identifier_field: name
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Cover", name: "cover", widget: "image", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
