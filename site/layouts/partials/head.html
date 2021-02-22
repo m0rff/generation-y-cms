@@ -14,13 +14,13 @@
     <link rel="icon" type="image/png" sizes="194x194" href="/img/icons/favicon-194x194.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/img/icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
-    <link rel="manifest" href="/img/icons/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="/img/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#d6ba63">
-    <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    
+
     <link rel="canonical" href="{{$.Site.BaseURL}}{{ .Permalink }}" />
 
     {{ if .IsPage }} <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" /> {{ else }}
