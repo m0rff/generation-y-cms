@@ -44,20 +44,30 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Cover", name: "cover", widget: "image", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "FooterImage", name: "footerImage", widget: "image", required: false}
-      - label: "Artist"
-        name: "artist"
-        widget: "relation"
-        collection: "artist"
-        search_fields: ['name']
-        value_field: "{{name}}"
-        display_fields: ["{{name}}"]  
-      - label: "Genre"
-        name: "genre"
-        widget: "relation"
-        collection: "genre"
-        search_fields: ['name']
-        value_field: "{{name}}"
-        display_fields: ["{{name}}"]
+      - label: "Artists"
+        name: "artists"
+        widget: "list"
+        summary: '{{fields.artist}}'
+        fields:
+        - label: "Artist"
+          name: "artist"
+          widget: "relation"
+          collection: "artist"
+          search_fields: ['name']
+          value_field: "{{name}}"
+          display_fields: ["{{name}}"]
+      - label: "Genres"
+        name: "genres"
+        widget: "list"
+        summary: '{{fields.genre}}'
+        fields:
+        - label: "Genre"
+          name: "genre"
+          widget: "relation"
+          collection: "genre"
+          search_fields: ['name']
+          value_field: "{{name}}"
+          display_fields: ["{{name}}"]
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "genre" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Genre" # Used in the UI, ie.: "New Post"
