@@ -1,9 +1,6 @@
 {{ partial "head" . }}
 
-{{ $artist := index (.Params.artists) 0}}
-{{ $genre := index (.Params.genres) 0}}
-
-{{ $genres := (where (where .Site.Pages "Type" "genre") ".Params.name" "=" $genre.genre) }}
+{{ $genres := (where (where .Site.Pages "Type" "genre") ".Params.name" "=" .Params.name) }}
 {{ $genre := index ($genres) 0}}
 
 <body class="ctsingle">
@@ -18,8 +15,7 @@
             {{if .Params.cover}}
               <div class="post-card-image" style="background-image: url({{.Params.image | absURL}})"></div>
             {{else}}
-              <div class="post-card-image"
-                style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
+              <div class="post-card-image" style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
             {{end}}
 
             <div class="post-card-content" style="background-color: {{$genre.Params.color1}}">
@@ -28,20 +24,12 @@
                   {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
                     #{{$tag}} {{end}} </span>
                   {{ end }}
-                    <h5 style="color: {{$genre.Params.color3}}">{{$genre.Params.name}}</h5>
-                  <h1 class="post-card-title" style="color: {{$genre.Params.color4}}">{{$artist.artist}}: {{.Title}}</h1>
+                  <h2 class="post-card-title" style="color: {{$genre.Params.color4}}">{{.Params.name}}</h2>
                 </header>
               </a>
-              <section class="post-card-excerpt" style="padding: 0 25px;color: {{$genre.Params.color2}}">
-                <div style="width:100%;">
-                  <div style="float:left;width:30%;">
-                    <img src="{{.Params.image | absURL}}" width="256">
-                  </div>
-                  <div style="float:none;">
+              <section class="post-card-excerpt" style="padding: 0 25px; color: {{$genre.Params.color2}}" >
                     {{ .Content }}
-                  </div>
               </section>
-            </div>
         </div>
         </article>
       </div>
