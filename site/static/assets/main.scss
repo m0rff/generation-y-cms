@@ -45,7 +45,7 @@ $color_primrose_approx: #e6e699;
 //fonts
 $font_0: sans-serif;
 $font_1: monospace;
-$font_2: Exo 2;
+$font_2: "Exo 2";
 
 //@extend-elements
 //original selectors
@@ -1313,13 +1313,13 @@ hr {
 	li {
 		display: block;
 		margin: 0;
-		font-weight: 600;
+		font-weight: 500;
 		padding: 0;
 		text-transform: uppercase;
 		a {
 			display: block;
 			margin: 0;
-			font-weight: 600;
+			font-weight: 500;
 			padding: 10px 12px;
 			color: $white;
 			opacity: 0.9;
