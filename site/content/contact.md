@@ -6,8 +6,8 @@ noauthor = true
 share = false
 title = "Contact"
 type = "page"
+contactForm = true
 
 +++
 
-
-Kontaktdaten
+    

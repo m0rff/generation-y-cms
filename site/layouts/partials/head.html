@@ -35,7 +35,4 @@
     {{ "<!-- Stylesheets -->" | safeHTML }}
     {{ $style := resources.Get "main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
-
-    {{ if .Site.Params.RSSLink}}<link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{else}}{{ if eq .URL "/" }}<link href="{{ "index.xml" | absURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }} {{ end }}
-
 </head>

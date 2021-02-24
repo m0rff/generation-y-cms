@@ -25,6 +25,24 @@
           {{ .Content }}
       </section>
 
+      {{ if eq .Params.contactForm true }}
+      <section class="subscribe-form">
+          <form action="/sucess" method="post" data-netlify="true" netlify-honeypot="bot-field">
+            <p class="hidden">
+              <label>Don’t fill this out if you’re human:
+                <input name="bot-field" /></label>
+            </p>
+            <div class="form-group">
+              <input type="text" name="messageSender" id="full-name" placeholder="Your name" required class="subscribe-email">
+              <input type="email" name="messageEmail" id="email-address" placeholder="Your email" required class="subscribe-email">
+              <textarea rows="5" name="messageContent" id="message" placeholder="Your message" required class="subscribe-email"></textarea>
+              <div data-netlify-recaptcha="true"></div>
+              <button type="submit" value="Submit" class="subscribe-button">Send</button>
+            </div>
+          </form>
+        </section>
+      {{end}}
+
       {{if .Params.author }}
       <footer class="post-card-meta">
           <span class="post-card-author"><a href="/">{{.Params.author | default .Site.Params.author}}</a></span>

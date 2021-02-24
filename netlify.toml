@@ -18,12 +18,21 @@
 [[redirects]]
   from = "/"
   to = "/post"
-  status = 302
+  status = 301
   force = true
 
 [[headers]]
-  for = "/img/*"
+  for = "/img*"
   [headers.values]
     cache-control = '''
-    public
+    public, 
+    s-max-age=604800, 
     max-age=604800'''
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    cache-control = '''
+    public, 
+    s-max-age=31536000, 
+    max-age=31536000'''

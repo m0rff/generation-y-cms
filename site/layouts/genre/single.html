@@ -12,7 +12,7 @@
         <div class="post-feed">
           <article class="post-card post">
             {{if .Params.cover}}
-              <div class="post-card-image" style="background-image: url({{.Params.image | absURL}})"></div>
+              <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}})"></div>
             {{else}}
               <div class="post-card-image" style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
             {{end}}
