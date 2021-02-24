@@ -11,6 +11,12 @@
   left: 15em;
 }
 
+.artist-social {
+  position: relative;
+  top: -280px;
+  left: 29em;
+}
+
 .artist-name {
   position: relative;
   top: -250px;
@@ -19,11 +25,21 @@
 }
 
 .artist-releases {
+  padding: 0 25px;
+  h4 {
+    font-size: 2em;
+  }
+  ul {
+    li {
+      font-size: 2em;
+      list-style: none;
+    }
+  }
 }
 
 .artist-content {
   position: relative;
-  top: -200px;
+  top: -250px;
 }
 
 @media (max-width: 666) {
@@ -51,6 +67,12 @@
     font-size: 2rem;
   }
 
+  .artist-social {
+    position: relative;
+    top: -250px;
+    left: 19em;
+  }
+
   .artist-name {
     position: relative;
     top: -250px;
@@ -65,6 +87,6 @@
 
   .artist-content {
     position: relative;
-    top: -250px;
+    top: -300px;
   }
 }

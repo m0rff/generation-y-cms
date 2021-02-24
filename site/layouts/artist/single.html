@@ -18,9 +18,12 @@
               </div>
               {{if .Params.portrait}}
               <img class="artist-image" src="{{.Params.portrait | absURL}}" width="256">
-              <h1 class="artist-name">{{.Params.name}}</h1>
-              <h2 class="artist-description">({{.Params.description}})</h2>
               {{end}}
+              <h1 class="artist-name">{{.Params.name}}</h1>
+              <h2 class="artist-description">{{.Params.description}}</h2>
+              <div class="artist-social">
+                {{ partial "artist-social-links" . }}
+              </div>
             {{else}}
               <div class="post-card-image"
                 style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
@@ -32,22 +35,24 @@
                   #{{$tag}} {{end}} </span>
                 {{ end }}
               </header>
-              <section class="post-card-excerpt" style="padding: 0 25px;">
-                    {{ .Content }}
-                    <h4>Releases</h4>
-                    <ul>
-                      {{range $releases}}
-                      {{$release := .}}
-                        {{range .Params.artists}}
-                          {{ if eq .artist $artist.Params.name }}
-                          <li>
-                            <a class="release" href="{{.Permalink}}">{{$release.Params.title}}</a> ({{ $release.Date.Format "2006" }})
-                          </li>
-                          {{ end }}
+                <section class="artist-releases">
+                  <h4>Releases</h4>
+                  <ul>
+                    {{range $releases}}
+                    {{$release := .}}
+                      {{range .Params.artists}}
+                        {{ if eq .artist $artist.Params.name }}
+                        <li>
+                          <a class="release" href="{{$release.Permalink}}">{{$release.Params.title}}</a> ({{ $release.Date.Format "2006" }})
+                        </li>
                         {{ end }}
                       {{ end }}
-                    </ul>
-              </section>
+                    {{ end }}
+                  </ul>
+                </section>
+                <section class="post-card-excerpt" style="padding: 0 25px;">
+                  {{ .Content }}
+                </section>
               {{if .Params.image}}
               <div class="footerImage">
                 <img src="{{.Params.image | absURL}}" width="100%">

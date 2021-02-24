@@ -34,6 +34,6 @@
 
     {{ "<!-- Stylesheets -->" | safeHTML }}
     {{ $options := (dict "enableSourceMap" true "outputStyle" "compressed") }}
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | postCSS }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
