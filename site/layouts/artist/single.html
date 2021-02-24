@@ -13,31 +13,27 @@
         <div class="post-feed">
           <article class="post-card post">
             {{if .Params.cover}}
-            <a class="post-card-image-link" href="{{ .Permalink }}">
-              <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}})"></div>
-            </a>
+              <div class="vMaskContainer">
+                <div class="post-card-image" style="background-image: url({{.Params.cover | absURL}})"></div>
+              </div>
+              {{if .Params.portrait}}
+              <img class="artist-image" src="{{.Params.portrait | absURL}}" width="256">
+              <h1 class="artist-name">{{.Params.name}}</h1>
+              <h2 class="artist-description">({{.Params.description}})</h2>
+              {{end}}
             {{else}}
-            <a class="post-card-image-link" href="{{ .Permalink }}">
               <div class="post-card-image"
                 style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
-            </a>
             {{end}}
 
-            <div class="post-card-content">
-              <a class="post-card-content-link" href="{{ .Permalink }}">
-                <header class="post-card-header">
-                  {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
-                    #{{$tag}} {{end}} </span>
-                  {{ end }}
-                  <h1 class="post-card-title">{{.Params.name}}</h1> <strong>({{.Params.description}})</strong>
-                </header>
-              </a>
+            <div class="post-card-content artist-content">
+              <header class="post-card-header">
+                {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
+                  #{{$tag}} {{end}} </span>
+                {{ end }}
+              </header>
               <section class="post-card-excerpt" style="padding: 0 25px;">
-                  {{if .Params.portrait}}
-                    <img src="{{.Params.portrait | absURL}}" width="512">
-                  {{end}}
                     {{ .Content }}
-
                     <h4>Releases</h4>
                     <ul>
                       {{range $releases}}
@@ -51,13 +47,12 @@
                         {{ end }}
                       {{ end }}
                     </ul>
-
-                  {{if .Params.image}}
-                  <div class="footerImage">
-                    <img src="{{.Params.image | absURL}}" width="100%">
-                  </div>
-                  {{end}}
               </section>
+              {{if .Params.image}}
+              <div class="footerImage">
+                <img src="{{.Params.image | absURL}}" width="100%">
+              </div>
+              {{end}}
             </div>
         </div>
         </article>

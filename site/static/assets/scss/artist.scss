@@ -1,0 +1,70 @@
+.artist-image {
+  position: relative;
+  top: -100px;
+  left: 3em;
+  border-radius: 50%;
+}
+
+.artist-description {
+  position: relative;
+  top: -280px;
+  left: 15em;
+}
+
+.artist-name {
+  position: relative;
+  top: -250px;
+  left: 10em;
+  font-size: 3rem;
+}
+
+.artist-releases {
+}
+
+.artist-content {
+  position: relative;
+  top: -200px;
+}
+
+@media (max-width: 666) {
+  .artist-name {
+    font-size: 3em;
+    left: 6em;
+  }
+}
+
+@media (max-width: 600px) {
+  .artist-image {
+    position: relative;
+    top: -160px;
+    left: 3em;
+    border-radius: 50%;
+    width: 150px;
+  }
+
+  .artist-description {
+    position: relative;
+    top: -280px;
+    left: 10em;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px black;
+    font-size: 2rem;
+  }
+
+  .artist-name {
+    position: relative;
+    top: -250px;
+    left: 7.5em;
+    font-size: 2.7em;
+    font-weight: bolder;
+    text-shadow: 3px 3px 4px black;
+  }
+
+  .artist-releases {
+  }
+
+  .artist-content {
+    position: relative;
+    top: -250px;
+  }
+}

@@ -6,8 +6,8 @@ noauthor = true
 share = false
 title = "About us"
 type = "page"
-image = "img/20200505_205554.jpg"
-footerImage = "img/FB_IMG_1593176103688.jpg"
+image = ""
+footerImage = "img/20200505_205554.jpg"
 cover = "img/20200704_065352.jpg"
 [menu.main]
 weight = 111
