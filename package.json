@@ -71,6 +71,6 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "sendmail": "^1.6.1"
+    "telegrambot": "^0.1.0"
   }
 }
