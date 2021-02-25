@@ -36,7 +36,7 @@
     {{ $options := (dict "enableSourceMap" true "outputStyle" "compressed") }}
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
     {{ if not .Site.IsServer }}
-        {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | postCSS | minify | fingerprint }}
+        {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | minify | fingerprint }}
     {{ end }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
