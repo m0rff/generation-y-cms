@@ -8,6 +8,5 @@ module.exports = {
     '@fullhuman/postcss-purgecss': {
         content: ['./**/*.html'],
     },
-    autoprefixer: {}
   }
 };

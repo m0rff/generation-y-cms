@@ -9670,7 +9670,7 @@ replace-ext@1.0.0:
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-1.0.0.tgz#de63128373fcbf7c3ccfa4de5a480c45a67958eb"
   integrity sha1-3mMSg3P8v3w8z6TeWkgMRaZ5WOs=
 
-request@*, request@^2.87.0, request@^2.88.0:
+request@^2.87.0, request@^2.88.0:
   version "2.88.2"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -10865,13 +10865,6 @@ teeny-tap@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/teeny-tap/-/teeny-tap-0.2.0.tgz#167e645182d06ac222d62bb2ab67947a70a58a68"
   integrity sha1-Fn5kUYLQasIi1iuyq2eUenClimg=
-
-telegrambot@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/telegrambot/-/telegrambot-0.1.0.tgz#1a71ebb50f256e6e7f66601f80996cc18af43c37"
-  integrity sha1-GnHrtQ8lbm5/ZmAfgJlswYr0PDc=
-  dependencies:
-    request "*"
 
 terser-webpack-plugin@^1.4.3:
   version "1.4.5"
