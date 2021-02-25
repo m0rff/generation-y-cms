@@ -6,7 +6,7 @@ module.exports = {
     },
     "postcss-custom-media": {},
     '@fullhuman/postcss-purgecss': {
-        content: ['./**/*.html', './**/*.js'],
+        content: ['./**/*.html'],
     },
     autoprefixer: {}
   }
