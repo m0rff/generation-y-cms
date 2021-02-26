@@ -1,0 +1,19 @@
+.genre-release-list ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre-release-list ul > li {
+    display: grid;
+    flex: 0 0 33.333333%;
+    margin-bottom: 3%;
+}
+
+.genre-release-list ul > li > a {
+    text-align: center;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 2em;
+}
+

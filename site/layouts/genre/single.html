@@ -28,21 +28,25 @@
               </a>
               <section class="post-card-excerpt" style="padding: 0 25px; color: {{$genre.Params.color2}}" >
                     {{ .Content }}
-
-                  {{ $releases := (where .Site.Pages "Type" "release") }}
-                  {{ range $releases }}
+                    <div class="genre-release-list">
                       <ul>
-                          {{$release := .}}
-                          {{range .Params.genres}}
-                              {{ if eq .genre $genre.Params.name }}
-                                {{$artist := index ($release.Params.artists) 0 }}
-                                <a href="{{$release.Permalink}}">
-                                  <li>{{$artist.artist}} - {{$release.Params.title}} ({{$release.Params.date.Format "2006"}})</li>
-                                </a>
-                              {{end}}
-                          {{end}}
-                      </ul>
-                  {{ end }}
+                        {{ $releases := (where .Site.Pages "Type" "release") }}
+                        {{ range $releases }}
+                                {{$release := .}}
+                                {{range .Params.genres}}
+                                    {{ if eq .genre $genre.Params.name }}
+                                      {{$artist := index ($release.Params.artists) 0 }}
+                                      <li>
+                                        <a href="{{$release.Permalink}}">
+                                          <img src="{{$.Site.BaseURL}}/{{$release.Params.cover}}" class="genre-release-list-cover">
+                                          <br>{{$artist.artist}} - {{$release.Params.title}} ({{$release.Params.date.Format "2006"}})
+                                        </a>
+                                      </li>
+                                    {{end}}
+                                {{end}}
+                        {{ end }}
+                  </ul>
+                </div>
               </section>
         </div>
         </article>
