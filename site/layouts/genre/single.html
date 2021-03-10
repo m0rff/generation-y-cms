@@ -28,8 +28,7 @@
               </a>
               <section class="post-card-excerpt" style="padding: 0 25px; color: {{$genre.Params.color2}}" >
                     {{ .Content }}
-                    <div class="genre-release-list">
-                      <ul>
+                      <ul class="genre-release-list">
                         {{ $releases := (where .Site.Pages "Type" "release") }}
                         {{ range $releases }}
                                 {{$release := .}}
@@ -46,7 +45,6 @@
                                 {{end}}
                         {{ end }}
                   </ul>
-                </div>
               </section>
         </div>
         </article>
